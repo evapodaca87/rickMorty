@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cards = (props) => {
+const Card = (props) => {
     return (
         <figure className='snip1579'>
             <img
@@ -32,4 +32,4 @@ const Cards = (props) => {
     );
 };
 
-export default Cards;
+export default Card;

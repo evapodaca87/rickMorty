@@ -20,7 +20,6 @@ html body {
     max-width: 400px;
     max-height: 400px;
     min-height: 250px;
-    width: 100%;
     background-color: #000000;
     color: #ffffff;
     text-align: left;
@@ -84,7 +83,7 @@ iframe {
 }
 .snip1579:hover figcaption,
 .snip1579.hover figcaption {
-    height: calc(55%);
+    height: calc(75%);
 }
 
 .App {

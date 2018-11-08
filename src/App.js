@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Input, Card, Image } from 'semantic-ui-react';
-import Cards from './Cards';
+import { Input } from 'semantic-ui-react';
+import CardList from './CardList';
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            cards: [ 1, 2, 3 ]
+        };
+    }
+
+    async componentDidMount() {
+        const cardFetch = await fetch('https://rickandmortyapi.com/api/character');
+        const cardJson = await cardFetch.json();
+        this.setState({ cards: cardJson });
+        console.log(this.state.cards);
+    }
+
     render() {
         return (
             <div className='App'>
@@ -16,7 +30,7 @@ class App extends Component {
                 <Input className='search' size='large' icon='search' placeholder='Search...' />
                 <br />
                 <br />
-                <Cards />
+                <CardList cards={this.state.cards} />
             </div>
         );
     }
