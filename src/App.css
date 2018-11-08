@@ -24,3 +24,7 @@ html body {
     margin-bottom: -50px;
     padding-bottom: 0px;
 }
+
+.search {
+    background-color: rgba(154, 214, 14, 0.87);
+}

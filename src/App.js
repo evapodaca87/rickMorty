@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-
 import { Input } from 'semantic-ui-react';
 
 class App extends Component {
@@ -13,7 +12,7 @@ class App extends Component {
                     src='https://mbtskoudsalg.com/images/rick-and-morty-logo-png-1.png'
                 />
                 <h1 className='head'>Library</h1>
-                <Input size='large' icon='search' placeholder='Search...' />
+                <Input className="search" size='large' icon='search' placeholder='Search...' />
                 <br />
                 <br />
                 <div>CARD PLACEHOLDER</div>
