@@ -2,8 +2,14 @@ html body {
     background-image: url("https://images5.alphacoders.com/876/thumb-1920-876590.png");
     background-repeat: no-repeat;
     background-size: cover;
+    color: white;
 }
 
 .App {
     text-align: center;
+    font-size: 2em;
+}
+
+.head {
+    font-size: 130px;
 }

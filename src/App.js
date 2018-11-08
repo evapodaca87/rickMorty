@@ -5,10 +5,9 @@ class App extends Component {
     render() {
         return (
             <div className='App'>
-                <div>
-                    <h1>Rick & Morty Library</h1>
-                </div>
-                <div>SEARCHBAR</div>
+                <h1 className='head'>Rick & Morty Library</h1>
+
+                <div>SEARCHBAR PLACEHOLDER</div>
                 <div>CARD PLACEHOLDER</div>
             </div>
         );
