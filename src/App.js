@@ -5,7 +5,8 @@ class App extends Component {
     render() {
         return (
             <div className='App'>
-                <h1 className='head'>Rick & Morty Library</h1>
+            <img className="imageHead" src="https://mbtskoudsalg.com/images/rick-and-morty-logo-png-1.png"></img>
+                <h1 className='head'> Library</h1>
 
                 <div>SEARCHBAR PLACEHOLDER</div>
                 <div>CARD PLACEHOLDER</div>

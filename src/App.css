@@ -13,3 +13,7 @@ html body {
 .head {
     font-size: 130px;
 }
+
+.imageHead {
+    width: 55%;
+}
