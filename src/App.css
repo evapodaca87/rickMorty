@@ -119,10 +119,16 @@ iframe {
 .split {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 100%;
 }
 .episode {
     justify-content: center;
     width: 100%;
     text-align: center;
+}
+
+.right {
+    display: flex;
+    float: right;
 }

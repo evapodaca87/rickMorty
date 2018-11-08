@@ -4,29 +4,25 @@ const Card = ({ cards }) => {
     return cards.map((card) => {
         return (
             <figure className='snip1579'>
-                <img
-                    className='boxes'
-                    src='https://rickandmortyapi.com/api/character/avatar/150.jpeg'
-                    alt='profile-sample2'
-                />
+                <img className='boxes' src={card.image} alt='profile-sample2' />
                 <figcaption>
                     <h1>{card.name}</h1>
                     <br />
-                    <div className='split'>
-                        <div>
-                            Species
-                            <div>Type</div>
-                            <div>Alive?</div>
-                        </div>
-                        <div>
-                            Planet
-                            <div>Origin</div>
-                            <div>Last Seen</div>
-                        </div>
-                    </div>
-                    <div>Gender</div>
+                    {/* <div className='split'> */}
+                        {/* <div className="left"> */}
+                            {card.species}
+                            <div>{card.type}</div>
+                            <div>{card.status}</div>
+                        {/* </div> */}
+                        {/* <div className="right"> */}
+                            {card.location.name}
+                            
+                        {/* </div> */}
+                    {/* </div> */}
+                    <div>{card.gender}</div>
                     <br />
-                    <div className='episode'>Episode</div>
+                    <div className="episode">Last Seen</div>
+                    <div className='episode'>last episode</div>
                     <br />
                 </figcaption>
             </figure>
