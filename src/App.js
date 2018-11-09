@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import { Input } from 'semantic-ui-react';
 import Card from './Card';
+import data from './rmapi.json';
+
+const api = data;
 
 class App extends Component {
     constructor(props) {
@@ -25,14 +28,9 @@ class App extends Component {
         this.setState({ results: newcards });
     };
 
-    componentDidMount() {
-        for (var i = 0; i < 25; i++) {
-            var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-                targetUrl = 'https://rickandmortyapi.com/api/character/?page=[i]';
-            fetch(proxyUrl + targetUrl).then((res) => res.json()).then((data) => {
-                this.setState({ cards: data.results });
-            });
-        }
+    async componentDidMount() {
+        const messageFetch = await fetch(api);
+        this.setState({ cards: data.results });
     }
 
     render() {
