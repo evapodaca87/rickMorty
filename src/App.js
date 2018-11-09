@@ -16,7 +16,7 @@ class App extends Component {
     }
 
     search = (e) => {
-        console.log(e.target.value);
+        this.state.results = [];
         let newcards = [];
         for (var i = 0; i < this.state.cards.length; i++) {
             let currentcard = this.state.cards[i];
