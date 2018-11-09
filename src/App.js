@@ -26,32 +26,13 @@ class App extends Component {
     };
 
     componentDidMount() {
-        var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-            targetUrl = 'https://rickandmortyapi.com/api/character';
-        var proxyUrl1 = 'https://cors-anywhere.herokuapp.com/',
-            targetUrl1 = 'https://rickandmortyapi.com/api/character/?page=2';
-        var proxyUrl2 = 'https://cors-anywhere.herokuapp.com/',
-            targetUrl2 = 'https://rickandmortyapi.com/api/character/?page=3';
-        var proxyUrl3 = 'https://cors-anywhere.herokuapp.com/',
-            targetUrl3 = 'https://rickandmortyapi.com/api/character/?page=4';
-        var proxyUrl4 = 'https://cors-anywhere.herokuapp.com/',
-            targetUrl4 = 'https://rickandmortyapi.com/api/character/?page=5';
-
-        fetch(proxyUrl + targetUrl).then((res) => res.json()).then((data) => {
-            this.setState({ cards: data.results });
-        });
-        // fetch(proxyUrl1 + targetUrl1).then((res) => res.json()).then((data) => {
-        //     this.setState({ cards: data.results });
-        // });
-        // fetch(proxyUrl2 + targetUrl2).then((res) => res.json()).then((data) => {
-        //     this.setState({ cards: data.results });
-        // });
-        // fetch(proxyUrl3 + targetUrl3).then((res) => res.json()).then((data) => {
-        //     this.setState({ cards: data.results });
-        // });
-        // fetch(proxyUrl4 + targetUrl4).then((res) => res.json()).then((data) => {
-        //     this.setState({ cards: data.results });
-        // });
+        for (var i = 0; i < 25; i++) {
+            var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+                targetUrl = 'https://rickandmortyapi.com/api/character/?page=[i]';
+            fetch(proxyUrl + targetUrl).then((res) => res.json()).then((data) => {
+                this.setState({ cards: data.results });
+            });
+        }
     }
 
     render() {
