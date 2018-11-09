@@ -16,12 +16,12 @@ class App extends Component {
     }
 
     search = (e) => {
+        let lowercase = e.target.value.toLowerCase();
         this.state.results = [];
         let newcards = [];
         for (var i = 0; i < this.state.cards.length; i++) {
             let currentcard = this.state.cards[i];
-            if (currentcard.name.includes(e.target.value)) {
-                console.log(currentcard);
+            if (currentcard.name.toLowerCase().includes(lowercase)) {
                 newcards.push(currentcard);
             }
         }
