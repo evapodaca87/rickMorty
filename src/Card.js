@@ -9,21 +9,27 @@ const Card = ({ cards }) => {
                     <h1>{card.name}</h1>
                     <br />
                     {/* <div className='split'> */}
-                        {/* <div className="left"> */}
-                            {card.species}
-                            <div>{card.type}</div>
-                            <div>{card.status}</div>
-                        {/* </div> */}
-                        {/* <div className="right"> */}
-                            {card.location.name}
-                            
-                        {/* </div> */}
+                    {/* <div className="left"> */}
+                    {card.species}
+                    <div className='type'>{card.type}</div>
+                    <div className='status'>
+                        {card.status}
+                        <br />
+                        {card.gender}
+                    </div>
                     {/* </div> */}
-                    <div>{card.gender}</div>
+                    {/* <div className="right"> */}
+                    {card.location.name}
+
+                    {/* </div> */}
+                    {/* </div> */}
                     <br />
-                    <div className="episode">Last Seen</div>
-                    <div className='episode'>last episode</div>
                     <br />
+                    <hr />
+                    <div className='episode'>
+                        Last Seen:<br />
+                        {card.location.name}
+                    </div>
                 </figcaption>
             </figure>
         );

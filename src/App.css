@@ -132,3 +132,11 @@ iframe {
     display: flex;
     float: right;
 }
+
+.type {
+    float: left;
+}
+
+.status {
+    float: right;
+}
