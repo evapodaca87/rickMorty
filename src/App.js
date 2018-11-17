@@ -42,7 +42,13 @@ class App extends Component {
                     src='https://mbtskoudsalg.com/images/rick-and-morty-logo-png-1.png'
                 />
                 <h1 className='head'>Character Library</h1>
-                <Input onChange={this.search} className='search' size='large' icon='search' placeholder='Search...' />
+                <Input
+                    onChange={this.search}
+                    className='search'
+                    size='large'
+                    icon='search'
+                    placeholder='Search a character'
+                />
                 <br />
                 <br />
                 <Card cards={this.state.results} />

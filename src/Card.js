@@ -8,21 +8,18 @@ const Card = ({ cards }) => {
                 <figcaption>
                     <h1>{card.name}</h1>
                     <br />
-                    {/* <div className='split'> */}
-                    {/* <div className="left"> */}
-                    {card.species}
-                    <div className='type'>{card.type}</div>
-                    <div className='status'>
-                        {card.status}
-                        <br />
-                        {card.gender}
+                    <div className='split'>
+                        <div className='left'>
+                            {card.species}
+                            <div className='type'>{card.type}</div>
+                            <div className='status'>
+                                {card.status}
+                                <br />
+                                {card.gender}
+                            </div>
+                        </div>
+                        <div className='right'>{card.location.name}</div>
                     </div>
-                    {/* </div> */}
-                    {/* <div className="right"> */}
-                    {card.location.name}
-
-                    {/* </div> */}
-                    {/* </div> */}
                     <br />
                     <br />
                     <hr />
